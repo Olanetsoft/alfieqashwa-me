@@ -1,3 +1,16 @@
+- name: Alfie Qashwa
+  bio: |
+    Written by Alfie Qashwa. Learn In The Clouds As Dead As Leaves.
+  avatar: ./avatars/alfieqashwa.jpg
+  featured: true
+  social:
+    - name: github
+      url: https://github.com/alfieqashwa
+    - name: twitter
+      url: https://twitter.com/alfieqashwa
+    - name: instagram
+      url: https://instagram.com/alfieqashwa
+
 - name: Dennis Brotzky
   bio: |
     Written by You. This is where your author bio lives. Share your work, your
