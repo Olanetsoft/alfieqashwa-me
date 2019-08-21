@@ -10,3 +10,16 @@
       url: https://twitter.com/alfieqashwa
     - name: instagram
       url: https://instagram.com/alfieqashwa
+
+- name: Celloworld
+  bio: |
+    Written by Celloworld. Learn In The Clouds As Dead As Leaves. 🇬🇧
+  avatar: ./avatars/celloworld.png
+  featured: true
+  social:
+    - name: github
+      url: https://github.com/alfieqashwa
+    - name: twitter
+      url: https://twitter.com/alfieqashwa
+    - name: instagram
+      url: https://instagram.com/alfieqashwa
