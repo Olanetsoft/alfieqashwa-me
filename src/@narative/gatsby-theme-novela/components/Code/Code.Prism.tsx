@@ -4,10 +4,12 @@ import styled from "@emotion/styled";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import theme from 'prism-react-renderer/themes/nightOwl'
 
-import Icons from "@icons";
-import mediaqueries from "@styles/media";
-import { copyToClipboard } from "@utils";
+import Icons from "@narative/gatsby-theme-novela/src/icons";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+import { copyToClipboard } from "@narative/gatsby-theme-novela/src/utils";
+
 import { LangsTitle } from './LangsTitle'
+
 const RE = /{([\d,-]+)}/;
 
 function calculateLinesToHighlight(meta) {
