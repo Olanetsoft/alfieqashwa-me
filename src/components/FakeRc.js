@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import Container from './Container';
 
 // TODOS: just temporary
 const pink = 'rgb(255, 167, 196)';
@@ -151,7 +150,7 @@ export default class extends Component {
     };
 
     return (
-      <Container>
+      <>
         <H1>TPS KARDUS</H1>
 
         <form onSubmit={this.handleSubmit}>
@@ -217,7 +216,7 @@ export default class extends Component {
             {total}
           </h1>
         </Total>
-      </Container>
+      </>
     );
   }
 }
