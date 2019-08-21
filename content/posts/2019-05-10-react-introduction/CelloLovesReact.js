@@ -23,7 +23,9 @@ class CelloLovesReact extends Component {
           <Fade left opposite cascade collapse when={show}>
             Cello
             <strong style={{ color: 'pink', fontSize: '42px' }}>
-              <span role="img">❤️</span>
+              <span role="img" aria-labelledby="heart">
+                ❤️
+              </span>
             </strong>
             React
           </Fade>
