@@ -6,7 +6,7 @@ export default merge(defaultTheme, {
   colors: {
     prism: {
       background: `#061526 !important`,
-      highlightBorder: tailwind.colors.pink[6]
+      highlightBorder: `#d23669`
     }
   }
 });

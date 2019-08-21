@@ -37,8 +37,8 @@ function CodePrism({ codeString, language, metastring, ...props }) {
     return (
       <Container>
       <LiveProvider code={codeString} noInline={true} theme={theme}>
-        <LiveEditor style={{ marginBottom: '6px' }} />
-        <LivePreview style={{ fontSize: '18px'}} />
+        <LiveEditor style={{ marginBottom: '6px', borderRadius: '4px' }} />
+        <LivePreview style={{ fontSize: '18px', borderRadius: '4px' }} />
         <LiveError  style={{ color: 'tomato' }} />
       </LiveProvider >
       </Container>
@@ -106,7 +106,7 @@ function Copy({ toCopy }: { toCopy: string }) {
     <CopyButton onClick={copyToClipboardOnClick}>
       {hasCopied ? (
         <>
-          Copied <Icons.Copied fill="#2b834e" />
+          Copied <Icons.Copied fill="rgb(43, 131, 78)" />
         </>
       ) : (
         <>
@@ -119,7 +119,7 @@ function Copy({ toCopy }: { toCopy: string }) {
 
 const CopyButton = styled.button`
   position: absolute;
-  right: 22px;
+  right: 7px;
   top: 2px;
   padding: 8px 12px 7px;
   border-radius: 5px;
@@ -129,10 +129,10 @@ const CopyButton = styled.button`
   &:hover {
     background: rgba(255, 255, 255, 0.07);
   }
-
+/*
   ${mediaqueries.tablet`
     display: none;
-  `}
+  `} */
 `;
 
 const Container = styled.div`

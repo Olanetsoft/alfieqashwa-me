@@ -8,13 +8,13 @@ const LanguageHighlight = css`
   font-size: 0.8em;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
     Courier New, monospace;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.1em;
   line-height: 1.3;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.4rem;
   position: absolute;
   left: 1.3rem;
   text-align: left;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   top: 0;
 `;
 
@@ -66,10 +66,14 @@ export const LangsTitle = styled.div`
   }
   pre[class*='language-sh']::before {
     content: 'sh';
+    background: rgb(34, 102, 61);
+    color: white;
     ${LanguageHighlight};
   }
   pre[class*='language-bash']::before {
     content: 'bash';
+    background: rgb(34, 102, 61);
+    color: white;
     ${LanguageHighlight};
   }
   pre[class*='language-yaml']::before {
