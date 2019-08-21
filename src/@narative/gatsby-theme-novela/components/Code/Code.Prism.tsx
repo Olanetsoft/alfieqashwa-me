@@ -106,11 +106,11 @@ function Copy({ toCopy }: { toCopy: string }) {
     <CopyButton onClick={copyToClipboardOnClick}>
       {hasCopied ? (
         <>
-          Copied <Icons.Copied fill="#6f7177" />
+          Copied <Icons.Copied fill="#2b834e" />
         </>
       ) : (
         <>
-          Copy <Icons.Copy fill="#6f7177" />
+          Copy <Icons.Copy fill="#d23669" />
         </>
       )}
     </CopyButton>
@@ -120,7 +120,7 @@ function Copy({ toCopy }: { toCopy: string }) {
 const CopyButton = styled.button`
   position: absolute;
   right: 22px;
-  top: 24px;
+  top: 2px;
   padding: 8px 12px 7px;
   border-radius: 5px;
   color: #6f7177;
