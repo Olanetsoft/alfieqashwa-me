@@ -46,7 +46,7 @@ function CodePrism({ codeString, language, metastring, ...props }) {
   } else {
 
   return (
-    <Highlight {...defaultProps} code={codeString} language={language}>
+    <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
       {({ className, tokens, getLineProps, getTokenProps }) => {
         return (
           <LangsTitle>
