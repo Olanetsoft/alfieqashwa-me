@@ -189,11 +189,11 @@ _Gimana kalo ga jadi ujan?_
 Jika kondisinya tidak terpenuhi, maka eksekusi 👆 tidak terjadi. Atau kita dapat menulis satu `statement` lagi jika kondisi di atas tidak terpenuhi:
 
 ```js
-  if (hujan) {
-    return alert("bawa payung!")
-  } else {
-    return alert("bawa gayung!") // yup, gayung. not a typo.
-  }
+if (hujan) {
+  return alert("bawa payung!")
+} else {
+  return alert("bawa gayung!") // yup, gayung. not a typo.
+}
 ```
 
 ## `if`, `else if`, `else`
@@ -210,13 +210,13 @@ Kita dapat menuliskan...
 if (nonton) {
   return pesanTiketBioskop
 }
-if (nembakDiterima) {
-  return alert("Besok pagi melamar")
-} else if (nembakDitolak) {
-  return lompatDariFlyOverCiputat
-} else {
-  return kuserahkanPadaNYA
-}
+  if (nembakDiterima) {
+    return alert("Besok pagi melamar")
+  } else if (nembakDitolak) {
+    return lompatDariFlyOverCiputat
+  } else {
+    return kuserahkanPadaNYA
+  }
 ```
 
 Kira-kira gitu konsepnya...
@@ -267,6 +267,7 @@ if ((suaraMalih + suaraBolot) !== suaraSah) {
   return VALIDATE
 }
 ```
+
 ```terminal
 🔴 hint:
 ✅ suara sah = suara paslon 01 + suara paslon 02;
