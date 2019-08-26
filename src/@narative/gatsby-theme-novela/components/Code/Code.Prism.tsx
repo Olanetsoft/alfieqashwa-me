@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import styled from "@emotion/styled";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import theme from 'prism-react-renderer/themes/nightOwl'
+import theme from 'prism-react-renderer/themes/oceanicNext'
 
 import Icons from "@narative/gatsby-theme-novela/src/icons";
 import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
