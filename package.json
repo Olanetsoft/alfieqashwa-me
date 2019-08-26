@@ -9,13 +9,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@narative/gatsby-theme-novela": "^0.4.0",
+    "@narative/gatsby-theme-novela": "^0.4.3",
     "@theme-ui/presets": "^0.2.34",
     "chart.js": "^2.8.0",
     "deepmerge": "^4.0.0",
-    "gatsby": "^2.13.73",
+    "gatsby": "^2.13.83",
     "gatsby-plugin-mailchimp": "^5.1.2",
-    "gatsby-plugin-manifest": "^2.2.6",
+    "gatsby-plugin-manifest": "^2.2.9",
     "npm-check-updates": "^3.1.21",
     "react": "^16.9.0",
     "react-chartjs-2": "^2.7.6",
