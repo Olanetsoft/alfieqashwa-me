@@ -3,10 +3,7 @@ import merge from 'lodash.merge';
 import defaultTheme from '@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui';
 
 export default merge(defaultTheme, {
-  useCustomProperties: true,
-  initialColorMode: 'default',
   colors: {
-    modes: {},
     prism: {
       background: `#061526 !important`,
       highlightBorder: `#d23669`
