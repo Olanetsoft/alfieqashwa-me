@@ -38,10 +38,7 @@ module.exports = {
           local: true,
           contentful: false
         }
-      }
-    },
-    'gatsby-theme-waves',
-    {
+      },
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Alfie Qashwa`,
