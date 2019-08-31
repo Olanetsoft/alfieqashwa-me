@@ -14,7 +14,7 @@ const LanguageHighlight = css`
   position: absolute;
   left: 1.3rem;
   text-align: left;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   top: 0;
 `;
 

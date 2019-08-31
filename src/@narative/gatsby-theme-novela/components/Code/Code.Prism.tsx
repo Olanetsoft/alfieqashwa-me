@@ -37,16 +37,15 @@ function CodePrism({ codeString, language, metastring, ...props }) {
     return (
       <Container>
       <LiveProvider code={codeString} noInline={true} theme={theme}>
-        <LiveEditor style={{ marginBottom: '6px', borderRadius: '4px' }} />
-        <LivePreview style={{ fontSize: '18px', borderRadius: '4px' }} />
+        <LiveEditor style={{ marginBottom: '3px', borderRadius: '2px' }} />
+        <LivePreview style={{ fontSize: '18px', borderRadius: '2px' }} />
         <LiveError  style={{ color: 'tomato' }} />
       </LiveProvider >
       </Container>
     )
   } else {
-
   return (
-    <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
+    <Highlight {...defaultProps} code={codeString} language={language}>
       {({ className, tokens, getLineProps, getTokenProps }) => {
         return (
           <LangsTitle>
@@ -56,7 +55,9 @@ function CodePrism({ codeString, language, metastring, ...props }) {
                 const { className } = getLineProps({
                   line,
                   key: index,
-                  className: shouldHighlightLine(index) ? "highlight-line" : "",
+                  className: shouldHighlightLine(index)
+                    ? "highlight-line"
+                    : ""
                 });
 
                 return (
@@ -103,7 +104,7 @@ function Copy({ toCopy }: { toCopy: string }) {
   }
 
   return (
-    <CopyButton onClick={copyToClipboardOnClick}>
+    <CopyButton onClick={copyToClipboardOnClick} data-a11y="false">
       {hasCopied ? (
         <>
           Copied <Icons.Copied fill="rgb(43, 131, 78)" />
@@ -120,7 +121,7 @@ function Copy({ toCopy }: { toCopy: string }) {
 const CopyButton = styled.button`
   position: absolute;
   right: 7px;
-  top: 2px;
+  top: 1px;
   padding: 8px 12px 7px;
   border-radius: 5px;
   color: #6f7177;
@@ -129,6 +130,19 @@ const CopyButton = styled.button`
   &:hover {
     background: rgba(255, 255, 255, 0.07);
   }
+
+  &[data-a11y="true"]:focus::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    width: 104%;
+    height: 104%;
+    border: 2px solid ${p => p.theme.colors.accent};
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.01);
+  }
+
 /*
   ${mediaqueries.tablet`
     display: none;
@@ -140,31 +154,40 @@ const Container = styled.div`
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  padding: 5px;
   font-size: 13px;
   margin: 15px auto 50px;
   border-radius: 5px;
+  font-family: ${p => p.theme.fonts.monospace} !important;
 
-      ${mediaqueries.desktop`
+  textarea,
+  pre {
+    padding: 32px !important;
+    font-family: ${p => p.theme.fonts.monospace} !important;
+  }
+
+  ${mediaqueries.desktop`
       left: -26px;
     `};
 
-    ${mediaqueries.tablet`
+  ${mediaqueries.tablet`
       max-width: 526px;
-      padding: 20px 20px;
       left: 0;
+
+      textarea,
+      pre {
+        padding: 20px !important;
+      }
     `};
 
-    ${mediaqueries.phablet`
-      border-radius: 0;
-      margin: 0 auto 25px;
-      padding: 25px 20px;
-      overflow: initial;
-      width: unset;
-      max-width: unset;
-      float: left;
-      min-width: 100%;
-      overflow: initial;
-      position: relative;
-    `};
+  ${mediaqueries.phablet`
+    border-radius: 0;
+    margin: 0 auto 25px;
+    overflow: initial;
+    width: unset;
+    max-width: unset;
+    float: left;
+    min-width: 100%;
+    overflow: initial;
+    position: relative;
+  `};
 `;
