@@ -1,8 +1,17 @@
 import { funk } from '@theme-ui/presets';
-import merge from 'lodash.merge';
-import defaultTheme from '@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui';
+import merge from 'deepmerge';
+import novelaTheme from '@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui';
+import wavesTheme from 'gatsby-theme-waves/src/gatsby-plugin-theme-ui/index';
 
-export default merge(defaultTheme, {
+const waves = merge(wavesTheme, {
+  breakpoints: ['1000px'],
+  colors: {
+    primary: 'rebeccapurple',
+    modes: { dark: { background: '#1e1e1e' } }
+  }
+});
+
+const novela = merge(novelaTheme, {
   colors: {
     prism: {
       background: `#061526 !important`,
@@ -16,3 +25,5 @@ export default merge(defaultTheme, {
     // monospace: `"Operator Mono", Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`
   }
 });
+
+export default merge(novela, waves);

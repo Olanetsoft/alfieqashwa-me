@@ -38,6 +38,7 @@ module.exports = {
         }
       }
     },
+    'gatsby-theme-waves',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
